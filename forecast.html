@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast - Weather Watch</title>
+    <meta name="description" content="Get detailed weather forecasts for any location around the world">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="custom-bg-gradient">
+    <nav class="navbar navbar-expand-lg navbar-dark" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Weather Watch</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Weather</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="forecast.html" aria-current="page">Forecast</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container py-5">
+            <header class="text-center text-white mb-4">
+                <h1 class="display-4 fw-bold">Weather Forecast</h1>
+                <p class="lead">Detailed forecast for your location</p>
+            </header>
+
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-8 col-lg-6">
+                    <div id="forecast-location-message" class="text-center text-white mb-3 location-message"
+                        aria-live="polite">
+                        <i class="fas fa-location-dot me-2" aria-hidden="true"></i>
+                        <span id="forecast-location-text">Detecting your location...</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8 col-lg-6">
+                    <form id="forecast-search-form" class="d-flex" role="search" aria-label="Search for a city">
+                        <label for="forecast-city-input" class="visually-hidden">Enter city name</label>
+                        <input type="text" id="forecast-city-input"
+                            class="form-control form-control-lg rounded-pill rounded-end"
+                            placeholder="Enter city name..." required aria-required="true">
+                        <button type="submit" id="forecast-search-button"
+                            class="btn btn-primary rounded-pill rounded-start ms-n5" aria-label="Search">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                            <span class="visually-hidden">Search</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+
+                    <section class="card shadow mb-4 d-none" id="forecast-card" aria-labelledby="forecast-heading">
+                        <header class="card-header bg-primary text-white py-3">
+                            <h2 class="mb-0 text-center" id="forecast-heading">5-Day Forecast</h2>
+                        </header>
+                        <div class="card-body p-0">
+                            <div class="row g-0" id="forecast-container" role="list"
+                                aria-label="Weather forecast for the next 5 days">
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="card shadow mb-4 d-none" id="precipitation-card"
+                        aria-labelledby="precipitation-heading">
+                        <header class="card-header bg-primary text-white py-3">
+                            <h2 class="mb-0" id="precipitation-heading">Precipitation Forecast</h2>
+                        </header>
+                        <div class="card-body">
+                            <div class="row" id="precipitation-container">
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="alert alert-danger text-center d-none" id="forecast-error-message" role="alert"
+                        aria-live="assertive">
+                        City not found. Please try again.
+                    </div>
+
+                    <div class="text-center d-none" id="forecast-loading" aria-live="polite">
+                        <div class="spinner-border text-light" role="status">
+                            <span class="visually-hidden">Loading forecast information...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center text-white mt-5" role="contentinfo">
+        <p>Weather Watch 2025</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="forecast.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #67b26f, #4ca2cd);
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+header h1 {
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+a:focus,
+button:focus,
+input:focus,
+[tabindex='0']:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+#search-button,
+#forecast-search-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#search-button:hover,
+#forecast-search-button:hover {
+  background-color: #357abd;
+}
+
+.custom-bg-gradient {
+  background: linear-gradient(135deg, #67b26f, #4ca2cd);
+  min-height: 100vh;
+}
+
+.ms-n5 {
+  margin-left: -3rem;
+  z-index: 5;
+}
+
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: none;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  border-bottom: none;
+}
+
+.bg-primary {
+  background-color: #0d6efd !important; 
+}
+
+.text-primary {
+  color: #0d6efd !important;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
+}
+
+#search-form,
+#forecast-search-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+#city-input,
+#forecast-city-input {
+  padding-left: 1.5rem;
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+footer {
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.location-message {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.forecast-item {
+  padding: 15px;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.forecast-item:last-child {
+  border-right: none;
+}
+
+.forecast-day {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.forecast-date {
+  font-size: 0.8rem;
+  color: #555; 
+  margin-bottom: 10px;
+}
+
+.forecast-icon {
+  font-size: 2rem;
+  margin: 10px 0;
+  color: #0d6efd; 
+}
+
+.forecast-temp {
+  font-weight: bold;
+}
+
+.forecast-description {
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  margin-top: 5px;
+}
+
+@media (max-width: 767px) {
+  .forecast-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .forecast-item:last-child {
+    border-bottom: none;
+  }
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.precipitation-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.precipitation-day {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.precipitation-icon {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: #0d6efd;
+}
+
+.precipitation-amount {
+  font-weight: bold;
+}
+
+.precipitation-probability {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
